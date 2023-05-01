@@ -8,9 +8,10 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { GenreModule } from './genre/genre.module';
 import { ActorsModule } from './actors/actors.module';
 import { MovieModule } from './movie/movie.module';
+import { CoffeeListComponent } from './coffee/coffee-list/coffee-list.component';
 
 @NgModule({
-  declarations: [AppComponent, SidebarComponent],
+  declarations: [AppComponent, SidebarComponent, CoffeeListComponent],
   providers: [],
   bootstrap: [AppComponent],
   imports: [

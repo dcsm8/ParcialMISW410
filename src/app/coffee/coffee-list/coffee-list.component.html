@@ -1,0 +1,22 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Tipo</th>
+      <th>Región</th>
+      <th>Sabor</th>
+      <th>Altura</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let coffee of coffees">
+      <td>{{ coffee.id }}</td>
+      <td>{{ coffee.nombre }}</td>
+      <td>{{ coffee.tipo }}</td>
+      <td>{{ coffee.region }}</td>
+      <td>{{ coffee.sabor }}</td>
+      <td>{{ coffee.altura }}</td>
+    </tr>
+  </tbody>
+</table>
