@@ -1,0 +1,38 @@
+<div class="card">
+  <div class="card-body">
+    <h3>{{ actorsDetail.name }}</h3>
+    <h4 id="descripcionBiografia" class="mt-4">Biografía</h4>
+
+    <p>{{ actorsDetail.biography }}</p>
+    <h4 id="descripcionBiografia" class="mt-4">Información personal</h4>
+    <table aria-describedby="descripcionBiografia" class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col" id="nacionalidad">Nacionalidad</th>
+          <th scope="col" id="nacimiento">Fecha de nacimiento</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{ actorsDetail.nationality }}</td>
+          <td>{{ actorsDetail.birthDate | date : "dd/MM/YYYY" }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <h4 id="descripcionPeliculas" class="mt-4">Películas</h4>
+    <table aria-describedby="descripcionPeliculas" class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col" id="ano">Año</th>
+          <th scope="col" id="titulo">Título</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let movie of actorsDetail.movies">
+          <td>{{ movie.releaseDate | date : "yyyy" }}</td>
+          <td>{{ movie.title }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

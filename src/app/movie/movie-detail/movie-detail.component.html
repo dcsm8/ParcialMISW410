@@ -1,0 +1,86 @@
+<div *ngIf="isLoading" class="text-center my-3">
+  <div class="spinner-border text-primary" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>
+
+<div class="card" *ngIf="!isLoading && movie">
+  <div class="card-body">
+    <h3 id="movieTitle">{{ movie.title }}</h3>
+    <table class="table table-striped" aria-describedby="movieTitle">
+      <thead>
+        <tr>
+          <th scope="col">Item</th>
+          <th scope="col">Descripción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Duración</td>
+          <td>{{ movie.duration }}</td>
+        </tr>
+        <tr>
+          <td>País</td>
+          <td>{{ movie.country }}</td>
+        </tr>
+        <tr>
+          <td>Fecha de lanzamiento</td>
+          <td>{{ movie.releaseDate | date : "dd/MM/YYYY" }}</td>
+        </tr>
+        <tr>
+          <td>Popularidad</td>
+          <td>
+            <div class="d-flex justify-content-start">
+              <span
+                *ngFor="let star of [1, 2, 3, 4, 5]"
+                class="bi bi-star-fill"
+                [class.bi-star]="star > movie.popularity"
+                style="color: #ffc107"
+              >
+              </span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Género</td>
+          <td>{{ movie.genre.type }}</td>
+        </tr>
+        <tr>
+          <td>Plataformas</td>
+          <td *ngFor="let platform of movie.platforms">
+            {{ platform.name }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Actores</h3>
+    <div class="col-md-6 mb-3" *ngFor="let actor of movie.actors">
+      <div class="card text-center">
+        <img
+          [src]="actor.photo"
+          class="card-img-top rounded-circle mx-auto d-block card-img"
+          alt="Profile picture"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ actor.name }}</h5>
+        </div>
+      </div>
+    </div>
+
+    <h3>Reseñas</h3>
+    <div class="card" *ngFor="let review of movie.reviews">
+      <div class="card-body">
+        <h5 class="card-title">{{ review.creator }}</h5>
+        <span
+          *ngFor="let star of [1, 2, 3, 4, 5]"
+          class="bi bi-star-fill"
+          [class.bi-star]="star > review.score"
+          style="color: #ffc107"
+        >
+        </span>
+        <p class="card-text mt-2">{{ review.text }}</p>
+      </div>
+    </div>
+  </div>
+</div>

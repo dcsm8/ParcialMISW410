@@ -1,0 +1,42 @@
+<testExecutions version="1">
+  <file path="src/app/genre/genre.service.spec.ts">
+    <testCase name="GenreService getGenres should return a list of genres" duration="52"/>
+    <testCase name="GenreService selectGenre and clearSelectedGenre should set and clear the selected genre" duration="5"/>
+    <testCase name="GenreService getGenre should return a specific genre" duration="3"/>
+  </file>
+  <file path="src/app/movie/movie-list/movie-list.component.spec.ts">
+    <testCase name="MovieListComponent should render a spinner while movies are being loaded" duration="24"/>
+    <testCase name="MovieListComponent should set selected movie and update CSS classes" duration="9"/>
+    <testCase name="MovieListComponent should render movie cards after movies have been loaded" duration="27"/>
+    <testCase name="MovieListComponent should create" duration="5"/>
+  </file>
+  <file path="src/app/movie/movie.service.spec.ts">
+    <testCase name="MovieService should get movies and sort them by popularity" duration="3"/>
+    <testCase name="MovieService should get a single movie by id" duration="2"/>
+    <testCase name="MovieService should be created" duration="1"/>
+  </file>
+  <file path="src/app/sidebar/sidebar.component.spec.ts">
+    <testCase name="SidebarComponent should create" duration="17"/>
+  </file>
+  <file path="src/app/movie/movie-detail/movie-detail.component.spec.ts">
+    <testCase name="MovieDetailComponent should call getMovie with movieDetail.id when ngOnInit is called and movieDetail.id is available" duration="6"/>
+    <testCase name="MovieDetailComponent should call getMovie with changes.movieDetail.currentValue.id when ngOnChanges is called with movieDetail changes" duration="3"/>
+  </file>
+  <file path="src/app/actors/actors-detail/actors-detail.component.spec.ts">
+    <testCase name="ActorsDetailComponent should display actor details when an actor is selected" duration="6"/>
+  </file>
+  <file path="src/app/actors/actor.service.spec.ts">
+    <testCase name="Service: Actor should ..." duration="3"/>
+  </file>
+  <file path="src/app/app.component.spec.ts">
+    <testCase name="AppComponent should create the app" duration="10"/>
+  </file>
+  <file path="src/app/actors/actors-list/actors-list.component.spec.ts">
+    <testCase name="ActorsListComponent should update component actors property" duration="6"/>
+    <testCase name="ActorsListComponent should create" duration="4"/>
+  </file>
+  <file path="src/app/genre/genre-list/genre-list.component.spec.ts">
+    <testCase name="GenreListComponent should have an item" duration="5"/>
+    <testCase name="GenreListComponent should create" duration="4"/>
+  </file>
+</testExecutions>
